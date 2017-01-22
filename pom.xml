@@ -23,6 +23,15 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		<repository>
+			<id>Abstratt-OSS</id>
+			<name>Abstratt OSS Repo</name>
+			<url>http://repository-textuml.forge.cloudbees.com/snapshot/</url>
+			<layout>default</layout>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 
 	<modules>
