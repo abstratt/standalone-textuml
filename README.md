@@ -1,5 +1,5 @@
  
-[![Build Status on Cloudbees](https://textuml.ci.cloudbees.com/buildStatus/icon?job=standalone-textuml)](https://textuml.ci.cloudbees.com/job/standalone-textuml/)
+[![Build Status on Cloudbees](https://textuml.ci.cloudbees.com/buildStatus/icon?job=standalone-textuml-toolkit)](https://textuml.ci.cloudbees.com/job/standalone-textuml-toolkit/)
 [![Build Status on Travis CI](https://travis-ci.org/abstratt/standalone-textuml.svg?branch=master)](https://travis-ci.org/abstratt/standalone-textuml.svg?branch=master)
 
 This project allows one to execute the [TextUML compiler](http://abstratt.github.io/textuml/) as a regular Java application.
