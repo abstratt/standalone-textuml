@@ -49,6 +49,7 @@ public class StandaloneCompilationDirectorCLI {
 		registerURIMapping(URIConverter.URI_MAP, "pathmap://MDD_LIBRARIES/", "models/", "libraries/base.uml", classLoader);
 		registerURIMapping(URIConverter.URI_MAP, "pathmap://MDD_LIBRARIES/", "models/", "libraries/mdd_types.uml", classLoader);
 		registerURIMapping(URIConverter.URI_MAP, "pathmap://MDD_LIBRARIES/", "models/", "libraries/mdd_collections.uml", classLoader);
+		registerURIMapping(URIConverter.URI_MAP, "pathmap://MDD_LIBRARIES/", "models/", "libraries/mdd_media.uml", classLoader);		
 		registerURIMapping(URIConverter.URI_MAP, "pathmap://MDD_PROFILES/", "models/", "profiles/mdd_extensions.uml", classLoader);		
 		UMLResourcesUtil.initGlobalRegistries();
 		
