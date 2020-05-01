@@ -8,4 +8,4 @@
 	  <password>${env.BINTRAY_KEY}</password>
 	</server>
     </servers>
-</settings>'
+</settings>
