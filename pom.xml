@@ -36,6 +36,8 @@
 
 	<modules>
 		<module>com.abstratt.standalone</module>
+		<module>com.abstratt.mdd.standalone.utils</module>
+		<module>com.abstratt.mdd.cli.standalone</module>
 		<module>com.abstratt.mdd.frontend.cli.standalone</module>
 	</modules>
 

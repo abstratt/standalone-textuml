@@ -21,12 +21,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.MissingResourceException;
 import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
+import java.util.StringTokenizer;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
@@ -285,5 +287,33 @@ public class StandaloneRegistryLoader {
 			}
 		}
 		return null;
+	}
+
+	/**
+	 * Builds an Eclipse extension Registry from plugins found in the filesystem.
+	 * 
+	 * @param classLoader classloader to load contributions from
+	 * @throws IOException
+	 * @throws CoreException
+	 */
+	public static void build(ClassLoader classLoader) throws IOException, CoreException {
+		StandaloneRegistryLoader registryLoader = new StandaloneRegistryLoader();
+		IExtensionRegistry registry = registryLoader.createRegistry();
+		registryLoader.loadAllContributions(registry, classLoader);
+		String pluginsDir = System.getProperty("args.plugins");
+		if (pluginsDir != null) {
+			StringTokenizer tokenizer = new StringTokenizer(pluginsDir, ",");
+			while (tokenizer.hasMoreTokens()) {
+				String current = tokenizer.nextToken();
+				registryLoader.loadAllContributions(registry, new File(current));
+			}
+		}
+		Arrays.stream(registry.getExtensionPoints()).forEach((xp) -> {
+			System.out.println(xp.getUniqueIdentifier());
+			Arrays.stream(xp.getExtensions()).forEach((ext) -> {
+				System.out.println(">>> " + ext.getNamespaceIdentifier() + "." + ext.getSimpleIdentifier());	
+			});
+		});
+		registryLoader.makeDefault(registry);
 	}
 }

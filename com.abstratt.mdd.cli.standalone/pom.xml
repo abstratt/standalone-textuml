@@ -4,7 +4,7 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.abstratt.mdd</groupId>
-	<artifactId>com.abstratt.mdd.frontend.cli.standalone</artifactId>
+	<artifactId>com.abstratt.mdd.cli.standalone</artifactId>
 	<version>2.2.201606-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<parent>
@@ -20,25 +20,10 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.abstratt.mdd</groupId>
-			<artifactId>com.abstratt.mdd.frontend.textuml.grammar</artifactId>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>com.abstratt.mdd.target.core</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.abstratt.mdd</groupId>
-			<artifactId>com.abstratt.mdd.frontend.textuml.core</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.abstratt.mdd</groupId>
-			<artifactId>com.abstratt.mdd.frontend.core</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-            <groupId>com.abstratt.mdd</groupId>
-            <artifactId>com.abstratt.mdd.frontend.cli</artifactId>
-            <version>${project.version}</version>
-        </dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -62,7 +47,7 @@
 							<archive>
 								<manifest>
 									<mainClass>
-										com.abstratt.mdd.frontend.cli.standalone.StandaloneCompilationDirectorCLI
+										com.abstratt.mdd.cli.standalone.StandaloneMDDCLI
 									</mainClass>
 									<addClasspath>true</addClasspath>
 								</manifest>
