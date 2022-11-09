@@ -8,8 +8,8 @@
 
 	<parent>
 		<artifactId>master</artifactId>
-		<groupId>com.abstratt</groupId>
-		<version>1.6</version>
+		<groupId>com.abstratt.releng</groupId>
+		<version>4.4.0</version>
 	</parent>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -17,19 +17,22 @@
 	</properties>
 	<repositories>
 		<repository>
-			<id>wso2</id>
-			<url>http://dist.wso2.org/maven2/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>Abstratt-OSS</id>
+			<id>abstratt-oss</id>
 			<name>Abstratt OSS Repo</name>
-			<url>http://repository-textuml.forge.cloudbees.com/snapshot/</url>
+			<url>https://maven.pkg.github.com/abstratt/maven-releases/</url>
 			<layout>default</layout>
 			<snapshots>
 				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>wso2</id>
+			<url>https://dist.wso2.org/maven2/</url>
+			<snapshots>
+				<enabled>false</enabled>
 			</snapshots>
 		</repository>
 	</repositories>
