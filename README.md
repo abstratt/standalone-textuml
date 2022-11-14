@@ -1,6 +1,10 @@
 
 This project allows one to execute the [TextUML compiler](http://abstratt.github.io/textuml/) as a regular Java application.
 
+### Bugs and feature requests
+
+Please use the issue tracker for the [TextUML Toolkit](https://github.com/abstratt/textuml/issues).
+
 ### Building
 
 ```mvn clean install```
